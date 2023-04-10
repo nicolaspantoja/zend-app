@@ -3,7 +3,6 @@
 namespace Album;
 
 use Zend\Router\Http\Segment;
-use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
     'router'=>[
@@ -11,7 +10,7 @@ return [
             'album' => [
                 'type' => Segment::class,
                 'options' => [
-                    'route' => '/album[:action[/:id]]',
+                    'route' => '/album[/:action[/:id]]',
                     'constraints' => [
                         'action' => '[a-zA-Z][a-zA-Z0-9]*',
                         'id' => '[0-9]+',
